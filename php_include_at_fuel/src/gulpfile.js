@@ -5,8 +5,9 @@ var cache			= require('gulp-cached');
 var sass			= require('gulp-sass');
 var sassGlob		= require('gulp-sass-glob');
 var cssbeautify		= require('gulp-cssbeautify');
-var autoprefixer	= require('gulp-autoprefixer');
-var please			= require('gulp-pleeease');
+var postcss			= require('gulp-postcss');
+var autoprefixer	= require('autoprefixer');
+var minifycss		= require('gulp-clean-css');
 
 // reload
 var connect			= require('gulp-connect-php');
@@ -22,6 +23,10 @@ var dir = {
 	critical: assets + '/scss/**/critical.scss'
 }
 
+var postcssPlugin = [
+	autoprefixer()
+]
+
 
 gulp.task('sass', function() {
 	gulp.src([dir.scss + '**/*.scss', '!' + dir.critical])
@@ -31,9 +36,7 @@ gulp.task('sass', function() {
 		.pipe(cache(sass))
 		.pipe(sassGlob())
 		.pipe(sass())
-		.pipe(autoprefixer({
-			cascade: true
-		}))
+		.pipe(postcss(postcssPlugin))
 		.pipe(cssbeautify({
 			indent: '\t'
 		}))
@@ -50,12 +53,11 @@ gulp.task('sass_criticalRenderingPath', function() {
 		.pipe(cache(sass))
 		.pipe(sassGlob())
 		.pipe(sass())
-		.pipe(autoprefixer({
-			cascade: false
-		}))
-		.pipe(please({
-			minifier: true
-		}))
+		.pipe(postcss(postcssPlugin))
+		// .pipe(cssbeautify({
+		// 	indent: '\t'
+		// }))
+		.pipe(minifycss())
 		.pipe(gulp.dest(dir.css))
 		.pipe(browserSync.stream());
 });
@@ -65,7 +67,7 @@ gulp.task('sass_criticalRenderingPath', function() {
 gulp.task('connect-sync', function() {
 	connect.server({
 		port: 8001
-		, base: '../recruit_renewal'
+		, base: '../dir_name'
 	}, function() {
 		browserSync({
 			proxy: 'localhost:8001'
