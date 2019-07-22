@@ -1,0 +1,9 @@
+{
+  "name": "svg-sprite",
+  "version": "1.0.0",
+  "description": "svg-sprite gulp task",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-svg-sprite": "^1.5.0"
+  }
+}
