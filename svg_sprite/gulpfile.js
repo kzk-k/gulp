@@ -21,22 +21,6 @@ const view  = {
 			dimensions: false, // sass上でのサイズ用classを生成しない
 			bust: false // キャッシュ用パラメータを削除
 		}
-	},
-	shape : {
-		transform: [
-			{
-				svgo: {
-					plugins: [
-						{ 'removeTitle': true }, // titleを削除
-						{ 'removeXMLNS': true }, // xmlnを削除
-						{ 'removeDimensions': true } // width/heightを削除
-					]
-				}
-			}
-		]
-	},
-	svg : {
-		xmlDeclaration: false // xml宣言を削除
 	}
 };
 
