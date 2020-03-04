@@ -1,0 +1,28 @@
+{% extends "_partials/_template.njk" %}
+{% set pageTitle = "ページタイトル" %}
+{% set pageKeyword = "キーワード, キーワード" %}
+{% set pageDescription = "ページディスクリプション" %}
+{% block css %}
+	<link rel="stylesheet" href="vender.css">
+	<link rel="stylesheet" href="vender2.css">
+{% endblock %}
+
+
+
+
+{% block header %}
+<header>
+	<h1>indexHeader</h1>
+</header>
+{% endblock %}
+
+
+{% block content %}
+<h2>テスト</h2>
+{% endblock %}
+
+
+{% block js %}
+<script src="vender.js"></script>
+<script src="vender2.js"></script>
+{% endblock %}
