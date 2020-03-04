@@ -1,19 +1,14 @@
 {
   "name": "test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "headCSS": "gulp headCSS",
+    "stylus": "gulp stylus"
   },
   "browserslist": [
     "last 2 version",
     "> 5%",
-    "Android 4.4.3",
-    "ios_saf 11.0-11.4"
+    "Android 4.4"
   ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "autoprefixer": "^9.7.0",
     "browser-sync": "^2.26.7",
