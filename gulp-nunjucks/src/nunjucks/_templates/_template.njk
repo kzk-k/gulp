@@ -11,13 +11,12 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" href="favicon.ico">
 	{%- block css %}{% endblock -%}
-	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
 
 {% block header %}
-{% include "_partials/_header.njk" %}
+{% include "_templates/_header.njk" %}
 {% endblock %}
 
 
@@ -26,7 +25,7 @@
 </main>
 
 
-{% include "_partials/_footer.njk" %}
+{% include "_templates/_footer.njk" %}
 
 
 {% block js %}{% endblock -%}

@@ -27,7 +27,7 @@ const src = {
 
 const dist = {
 	views: './dist/',
-	css: './dist/css/'
+	css: './dist/'
 }
 
 function njkFunc() {
