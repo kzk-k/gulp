@@ -1,5 +1,5 @@
-@charset "UTF-8";
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@charset "utf-8";
+/* minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -53,7 +53,9 @@ html {
 	box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	-webkit-box-sizing: inherit;
 	box-sizing: inherit;
 }
@@ -82,15 +84,14 @@ td:not([align]),
 th:not([align]) {
 	text-align: left;
 }
-
-/*!
+/*
  * ress.css • v2.0.4
  * MIT License
  * github.com/filipelinhares/ress
  */
 html {
 	-webkit-text-size-adjust: 100%;
-  /* Prevent adjustments of font size after orientation changes in iOS */
+ /* Prevent adjustments of font size after orientation changes in iOS */
 	word-break: normal;
 }
 
@@ -98,16 +99,15 @@ input {
 	border-radius: 0;
 }
 
-/* Replace pointer cursor in disabled elements */
 [disabled] {
 	cursor: default;
 }
 
 textarea {
 	overflow: auto;
-  /* Internet Explorer 11+ */
+ /* Internet Explorer 11+ */
 	resize: vertical;
-  /* Specify textarea resizability */
+ /* Specify textarea resizability */
 }
 
 button,
@@ -116,7 +116,7 @@ optgroup,
 select,
 textarea {
 	font: inherit;
-  /* Specify font inheritance of form elements */
+ /* Specify font inheritance of form elements */
 }
 
 button,
@@ -138,26 +138,26 @@ button::-moz-focus-inner,
 
 select::-ms-expand {
 	display: none;
-  /* Internet Explorer 11+ */
+ /* Internet Explorer 11+ */
 }
 
 select::-ms-value {
 	color: currentColor;
-  /* Internet Explorer 11+ */
+ /* Internet Explorer 11+ */
 }
 
 ::-webkit-file-upload-button {
-  /* Correct the inability to style clickable types in iOS and Safari */
+/* Correct the inability to style clickable types in iOS and Safari */
 	-webkit-appearance: button;
 	color: inherit;
 	font: inherit;
-  /* Change font properties to `inherit` in Chrome and Safari */
+ /* Change font properties to `inherit` in Chrome and Safari */
 }
 
 html {
-	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
+	font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 	font-size: 3.125vw;
-	color: black;
+	color: #000;
 	word-break: break-all;
 	word-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
@@ -198,7 +198,7 @@ a {
 .u-ellipsis {
 	overflow: hidden;
 	max-width: 100%;
-	padding: .2rem 0;
+	padding: 0.2rem 0;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }

@@ -46,7 +46,7 @@ const postcssPlugin = [autoprefixer()];
 
 
 function stylusFunc() {
-	return gulp.src([src.stylus, '!' + src.critical])
+	return gulp.src([src.stylus, '!./src/stylus/**/_*.styl'])
 		.pipe(plumber({
 			errorHandler: notify.onError('Error: <%= error.message %>')
 		}))
