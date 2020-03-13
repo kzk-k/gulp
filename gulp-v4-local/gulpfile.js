@@ -6,6 +6,8 @@ const cache				= require('gulp-cached');
 const connect			= require('gulp-connect-php');
 const browserSync		= require('browser-sync');
 // css
+const sass				= require('gulp-sass');
+const sassGlob			= require("gulp-sass-glob");
 const stylus			= require('gulp-stylus');
 const postcss			= require('gulp-postcss');
 const autoprefixer		= require('autoprefixer');
@@ -14,6 +16,7 @@ const minifycss			= require('gulp-clean-css');
 
 const path = {
 	views: './*.php',
+	scss: './scss/**/*.scss',
 	stylus: './stylus/**/*.styl',
 	css: './css/',
 	critical: './stylus/**/critical.styl'
@@ -21,6 +24,22 @@ const path = {
 
 const postcssPlugin = [autoprefixer()];
 
+
+function sassFunc() {
+	return gulp.src([path.scss, '!' + path.critical])
+	.pipe(plumber({
+		errorHandler: notify.onError('Error: <%= error.message %>')
+	}))
+	.pipe(cache(sass))
+	.pipe(sassGlob()) // Sassの@importにおけるglobを有効にする
+	.pipe(sass())
+	.pipe(postcss(postcssPlugin))
+	.pipe(cssbeautify({
+		indent: '\t'
+	}))
+	.pipe(gulp.dest(path.css))
+	.pipe(browserSync.stream());
+};
 
 function stylusFunc() {
 	return gulp.src([path.stylus, '!' + path.critical])
@@ -74,6 +93,7 @@ function reload(done) {
 
 function watchFiles() {
 	gulp.watch(path.views, reload);
+	gulp.watch(path.scss, sassFunc);
 	gulp.watch(path.stylus, stylusFunc);
 	// gulp.watch(path.critical, headCSS);
 }
@@ -83,6 +103,7 @@ function watchFiles() {
 exports.default = gulp.parallel([connectSync, watchFiles]);
 
 // 単独実行用（パーシャルファイルのコンパイル）
+exports.sass = gulp.series([sassFunc]);
 exports.stylus = gulp.series([stylusFunc]);
 
 // 単独実行用（head内展開のCSSコンパイル）
