@@ -1,3 +1,18 @@
+media(breakpoints)
+	for breakpoint in breakpoints
+		if breakpoint == 'sm'
+			@media only screen and (min-width: breakpoint-sm)
+				{block}
+		if breakpoint == 'md'
+			@media only screen and (min-width: breakpoint-md)
+				{block}
+		if breakpoint == 'lg'
+			@media only screen and (min-width: breakpoint-lg)
+				{block}
+		if breakpoint == 'xl'
+			@media only screen and (min-width: breakpoint-xl)
+				{block}
+
 triangle($dir= top, $width= 10px, $height= 10px, $color= #000) {
 	width 0
 	height 0

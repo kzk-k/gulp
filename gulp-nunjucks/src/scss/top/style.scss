@@ -2,3 +2,8 @@
 @import '../_layouts/_partials';
 
 
+@include media(sm) {
+	body {
+		background-color: #ccc;
+	}
+}
