@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="../top/style.css">
+</head>
+<body>
+
+
+<%- include('../_templates/_layouts/_l-header') -%>
+<main class="l-mainContainer">
+
+
+<% for (var i in test) { %>
+	<div class="test"><%- test[i].name %></div>
+<% } %>
+
+</main>
+<%- include('../_templates/_layouts/_l-footer') %>
+
+
+<script src="test.js"></script>

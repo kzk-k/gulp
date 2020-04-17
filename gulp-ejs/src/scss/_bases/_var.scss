@@ -1,0 +1,16 @@
+$breakpoints: (
+	"xs": "screen and (min-width: 375px)",
+	'sm': 'screen and (min-width: 576px)',
+	'md': 'screen and (min-width: 768px)',
+	'lg': 'screen and (min-width: 992px)',
+	'xl': 'screen and (min-width: 1200px)',
+);
+$breakpoint-max: "screen and (max-width: 374px)";
+
+$font-base: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, serif;
+
+$color-primary: #dd1800;
+$color-black: #000;
+$color-gray: #efefef;
+$color-lightPink: #fff5ef;
+$color-lightYellow: #fffcef;

@@ -1,0 +1,44 @@
+.u-clearfix:after,
+.u-clearfix:before {
+	content: "";
+	display: table;
+}
+
+.u-clearfix:after {
+	clear: both;
+}
+
+.u-ellipsis {
+	overflow: hidden;
+	max-width: 100%;
+	padding: .2rem 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@for $i from 2 through 8 {
+	.u-lineClamp-#{$i} {
+		display: -webkit-box;
+		-webkit-line-clamp: #{$i};
+		-webkit-box-orient: vertical;
+		overflow: hidden; 
+	}
+}
+
+@for $i from 1 through 10 {
+	.u-mt-#{$i * 5} {
+		margin-top: #{$i * .5}rem;
+	}
+	.u-mb-#{$i * 5} {
+		margin-bottom: #{$i * .5}rem;
+	}
+}
+
+@for $i from 1 through 6 {
+	.u-pt-#{$i * 5} {
+		padding-top: #{$i * .5}rem;
+	}
+	.u-pb-#{$i * 5} {
+		padding-bottom: #{$i * .5}rem;
+	}
+}
