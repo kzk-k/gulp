@@ -1,5 +1,10 @@
-@mixin media($breakpoint) {
+@mixin mq($breakpoint) {
 	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+@mixin mq-max() {
+	@media #{$breakpoint-max} {
 		@content;
 	}
 }
