@@ -11,23 +11,20 @@
     "> 5%",
     "Android 4.4"
   ],
-  "dependencies": {
-    "autoprefixer": "^9.7.4",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.7",
     "cssbeautify": "^0.3.1",
     "gulp": "^4.0.2",
     "gulp-cached": "^1.1.1",
-    "gulp-clean-css": "^4.2.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-connect-php": "1.0.3",
     "gulp-cssbeautify": "^2.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
-    "gulp-stylus": "^2.7.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sass-glob": "^1.1.0"
-  },
-  "devDependencies": {
+    "gulp-sass-glob": "^1.1.0",
     "gulp-nunjucks-render": "^2.2.3"
   }
 }
