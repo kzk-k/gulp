@@ -48,3 +48,11 @@ select {
 	border-radius: 0;
 	box-shadow: none;
 }
+
+a,
+button {
+	transition-duration: .2s;
+	&:hover {
+		opacity: .8;
+	}
+}

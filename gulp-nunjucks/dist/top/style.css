@@ -155,18 +155,30 @@ select::-ms-value {
 }
 
 html {
-	font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, serif;
 	font-size: 3.125vw;
-	color: black;
+	color: #000;
 	word-break: break-all;
 	word-wrap: break-word;
 	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 }
 
-@media (min-width: 375px) {
+@media screen and (min-width: 375px) {
 	html {
 		font-size: 2.666666666666667vw;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	html {
+		font-size: 1.73611111111vw;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 10px;
 	}
 }
 
@@ -183,6 +195,31 @@ a {
 	text-decoration: none;
 	-webkit-tap-highlight-color: transparent;
 	outline: none;
+	color: inherit;
+}
+
+em {
+	font-style: normal;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+a,
+button {
+	-webkit-transition-duration: .2s;
+	transition-duration: .2s;
+}
+
+a:hover,
+  button:hover {
+	opacity: .8;
 }
 
 .u-clearfix:after,
@@ -378,10 +415,4 @@ a {
 
 .u-pb-30 {
 	padding-bottom: 3rem;
-}
-
-@media screen and (min-width: 576px) {
-	body {
-		background-color: #ccc;
-	}
 }
