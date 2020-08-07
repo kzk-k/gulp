@@ -1,0 +1,46 @@
+.u-clearfix:after,
+.u-clearfix:before {
+	content: "";
+	display: table;
+}
+
+.u-clearfix:after {
+	clear: both;
+}
+
+.u-ellipsis {
+	overflow: hidden;
+	max-width: 100%;
+	padding: .2rem 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@for $i from 2 through 8 {
+	.u-lineClamp-#{$i} {
+		display: -webkit-box;
+		-webkit-line-clamp: #{$i};
+		-webkit-box-orient: vertical;
+		overflow: hidden; 
+	}
+}
+
+// @include mq(sm) {
+// 	.u-container {
+// 		max-width: 560px;
+// 		margin-right: auto;
+// 		margin-left: auto;
+// 	}
+// }
+
+// @include mq(md) {
+// 	.u-container {
+// 		max-width: 720px;
+// 	}
+// }
+
+// @include mq(lg) {
+// 	.u-container {
+// 		max-width: 960px;
+// 	}
+// }
