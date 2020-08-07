@@ -1,0 +1,30 @@
+$breakpoints: (
+	"xs": "screen and (min-width: 375px)",
+	"sm": "screen and (min-width: 576px)",
+	"md": "screen and (min-width: 768px)",
+	"lg": "screen and (min-width: 992px)",
+	"xl": "screen and (min-width: 1200px)",
+);
+
+$breakpoint-max: "screen and (max-width: 374px)";
+
+$z-index: (
+    reset: 0,
+    modal: 20,
+    loadingLayer: 100,
+);
+
+$font-base: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ROBOTO", "メイリオ", Meiryo, serif;
+
+$white:    #fff !default;
+$gray-100: #fafafa !default;
+$gray-200: #eee !default;
+$gray-300: #b4b4b4 !default;
+$gray-400: #707070 !default;
+$gray-500: #5e5e5e !default;
+$gray-600: #3c3c3c !default;
+
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;

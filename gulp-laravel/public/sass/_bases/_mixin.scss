@@ -1,0 +1,55 @@
+@mixin mq($breakpoint) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+@mixin mq-max() {
+	@media #{$breakpoint-max} {
+		@content;
+	}
+}
+
+@mixin triangle($dir: top, $width: 10px, $height: 10px, $color: #000) {
+	width: 0;
+	height: 0;
+	@if $dir == 'top' {
+		border-width: 0 #{$width/2} #{$height} #{$width/2};
+		border-color: transparent transparent $color transparent;
+	} @else if $dir == 'bottom' {
+		border-width: #{$height} #{$width/2} 0 #{$width/2};
+		border-color: $color transparent transparent transparent;
+	} @else if $dir == 'right' {
+		border-width: #{$height/2} 0 #{$height/2} #{$width};
+		border-color: transparent transparent transparent $color;
+	} @else {
+		border-width: #{$height/2} #{$width} #{$height/2} 0;
+		border-color: transparent $color transparent transparent;
+	}
+	border-style: solid;
+}
+
+@mixin arrow($direction, $border-width, $border-color, $size) {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: $size;
+	height: $size;
+	border-right: $border-width solid $border-color;
+	border-bottom: $border-width solid $border-color;
+	@if $direction == top {
+		transform: translateY(-50%) rotate(-135deg);
+	}
+	@else if $direction == bottom {
+		transform: translateY(-50%) rotate(45deg);
+	}
+	@else if $direction == right {
+		transform: translateY(-50%) rotate(-45deg);
+	}
+	@else if $direction == left {
+		transform: translateY(-50%) rotate(135deg);
+	}
+	@else {
+		transform: translateY(-50%) rotate($direction) + deg;
+	}
+}

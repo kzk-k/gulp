@@ -155,7 +155,7 @@ select::-ms-value {
 }
 
 html {
-	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, serif;
+	font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ROBOTO", "メイリオ", Meiryo, serif;
 	font-size: 3.125vw;
 	color: #000;
 	word-break: break-all;
@@ -178,17 +178,28 @@ html {
 
 @media screen and (min-width: 768px) {
 	html {
-		font-size: 10px;
+		font-size: 1.302vw;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 12px;
 	}
 }
 
 body {
 	position: relative;
-	background-color: #fff;
+	background-color: #fafafa;
 }
 
-img {
-	vertical-align: top;
+.l-mainContainer {
+	overflow-x: hidden;
+}
+
+img,
+svg {
+	vertical-align: middle;
 }
 
 a {
@@ -209,17 +220,6 @@ select {
 	border-radius: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-}
-
-a,
-button {
-	-webkit-transition-duration: .2s;
-	transition-duration: .2s;
-}
-
-a:hover,
-  button:hover {
-	opacity: .8;
 }
 
 .u-clearfix:after,
@@ -289,130 +289,115 @@ a:hover,
 	overflow: hidden;
 }
 
-.u-mt-5 {
-	margin-top: 0.5rem;
+.l-header {
+	background: #fff;
+	padding: 1rem;
 }
 
-.u-mb-5 {
-	margin-bottom: 0.5rem;
+.l-header .logo {
+	margin-right: 2rem;
 }
 
-.u-mt-10 {
-	margin-top: 1rem;
+.l-header .news {
+	padding: 0.5rem 1.5rem;
+	background-color: #fafafa;
+	font-size: 1.3rem;
 }
 
-.u-mb-10 {
-	margin-bottom: 1rem;
+.l-header .news-anchor {
+	display: inline-block;
+	text-align: justify;
+	vertical-align: middle;
+	text-decoration: underline;
 }
 
-.u-mt-15 {
-	margin-top: 1.5rem;
+.l-header .news-anchor:hover {
+	text-decoration: none;
 }
 
-.u-mb-15 {
-	margin-bottom: 1.5rem;
+.l-header .anchorGroup {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 
-.u-mt-20 {
-	margin-top: 2rem;
+.l-header .anchorGroup-item {
+	width: calc(100% / 4 - 1%);
+	padding: 1rem 0;
+	border: 1px solid #707070;
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: bold;
 }
 
-.u-mb-20 {
-	margin-bottom: 2rem;
-}
+@media screen and (min-width: 1200px) {
+	.l-header {
+		padding-right: 3rem;
+		padding-left: 3rem;
+	}
 
-.u-mt-25 {
-	margin-top: 2.5rem;
-}
+	.l-header .headerInner {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 
-.u-mb-25 {
-	margin-bottom: 2.5rem;
-}
+	.l-header .row {
+		-webkit-box-flex: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: calc(100% - 12rem);
+	}
 
-.u-mt-30 {
-	margin-top: 3rem;
-}
+	.l-header .news {
+		max-width: calc(100% - 45rem);
+	}
 
-.u-mb-30 {
-	margin-bottom: 3rem;
-}
+	.l-header .anchorGroup {
+		width: 45rem;
+		margin-left: auto;
+		padding-left: 4rem;
+	}
 
-.u-mt-35 {
-	margin-top: 3.5rem;
-}
+	.l-header .anchorGroup-item:nth-child(1), .l-header .anchorGroup-item:nth-child(2) {
+		width: 12rem;
+	}
 
-.u-mb-35 {
-	margin-bottom: 3.5rem;
-}
+	.l-header .anchorGroup-item:nth-child(3), .l-header .anchorGroup-item:nth-child(4) {
+		width: auto;
+		border: none;
+		white-space: nowrap;
+	}
 
-.u-mt-40 {
-	margin-top: 4rem;
-}
+	.l-header .anchorGroup-item:nth-child(3):hover, .l-header .anchorGroup-item:nth-child(4):hover {
+		text-decoration: underline;
+	}
 
-.u-mb-40 {
-	margin-bottom: 4rem;
-}
+	.l-header .anchorGroup-item:nth-child(2) {
+		margin-right: 3.2rem;
+		margin-left: 3.2rem;
+	}
 
-.u-mt-45 {
-	margin-top: 4.5rem;
-}
+	.l-header .anchorGroup-item:nth-child(3) {
+		margin-left: auto;
+	}
 
-.u-mb-45 {
-	margin-bottom: 4.5rem;
-}
-
-.u-mt-50 {
-	margin-top: 5rem;
-}
-
-.u-mb-50 {
-	margin-bottom: 5rem;
-}
-
-.u-pt-5 {
-	padding-top: 0.5rem;
-}
-
-.u-pb-5 {
-	padding-bottom: 0.5rem;
-}
-
-.u-pt-10 {
-	padding-top: 1rem;
-}
-
-.u-pb-10 {
-	padding-bottom: 1rem;
-}
-
-.u-pt-15 {
-	padding-top: 1.5rem;
-}
-
-.u-pb-15 {
-	padding-bottom: 1.5rem;
-}
-
-.u-pt-20 {
-	padding-top: 2rem;
-}
-
-.u-pb-20 {
-	padding-bottom: 2rem;
-}
-
-.u-pt-25 {
-	padding-top: 2.5rem;
-}
-
-.u-pb-25 {
-	padding-bottom: 2.5rem;
-}
-
-.u-pt-30 {
-	padding-top: 3rem;
-}
-
-.u-pb-30 {
-	padding-bottom: 3rem;
+	.l-header .anchorGroup-item:nth-child(4) {
+		margin-left: 3.2rem;
+	}
 }
