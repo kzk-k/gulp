@@ -8,6 +8,12 @@ $breakpoints: (
 
 $breakpoint-max: "screen and (max-width: 374px)";
 
+$z-index: (
+    reset: 0,
+    modal: 20,
+    loadingLayer: 100,
+);
+
 $font-base: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ROBOTO", "メイリオ", Meiryo, serif;
 
 $white:    #fff !default;
