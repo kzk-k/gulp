@@ -5,7 +5,7 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^9.8.6",
-		"browser-sync": "^2.26.12",
+		"browser-sync": "^2.26.14",
 		"cssbeautify": "^0.3.1",
 		"gulp": "^4.0.2",
 		"gulp-cached": "^1.1.1",
