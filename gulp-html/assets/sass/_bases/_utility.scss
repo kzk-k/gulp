@@ -1,0 +1,127 @@
+.u-clearfix:after,
+.u-clearfix:before {
+	content: "";
+	display: table;
+}
+
+.u-clearfix:after {
+	clear: both;
+}
+
+.u-ellipsis {
+	overflow: hidden;
+	max-width: 100%;
+	padding: .2rem 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@for $i from 2 through 8 {
+	.u-lineClamp-#{$i} {
+		display: -webkit-box;
+		-webkit-line-clamp: #{$i};
+		-webkit-box-orient: vertical;
+		overflow: hidden; 
+	}
+}
+
+.d-flex {
+    display: flex !important;
+}
+.justify-content-start {
+    justify-content: flex-start !important;
+}
+.justify-content-end {
+    justify-content: flex-end !important;
+}
+.justify-content-center {
+    justify-content: center !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.justify-content-around {
+    justify-content: space-around !important;
+}
+.align-items-start {
+    align-items: flex-start !important;
+}
+.align-items-end {
+    align-items: flex-end !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.align-items-baseline {
+    align-items: baseline !important;
+}
+.align-items-stretch {
+    align-items: stretch !important;
+}
+
+@for $i from 1 through 10 {
+    .mt-#{$i * 5} {
+        margin-top: #{$i * 0.5}rem !important;
+    }
+    .mr-#{$i * 5} {
+        margin-right: #{$i * 0.5}rem !important;
+    }
+    .mb-#{$i * 5} {
+        margin-bottom: #{$i * 0.5}rem !important;
+    }
+    .ml-#{$i * 5} {
+        margin-left: #{$i * 0.5}rem !important;
+    }
+    .my-#{$i * 5} {
+        margin-top: #{$i * 0.5}rem !important;
+        margin-bottom: #{$i * 0.5}rem !important;
+    }
+}
+.mr-auto {
+    margin-right: auto !important;
+}
+.ml-auto {
+    margin-left: auto !important;
+}
+
+@for $i from 1 through 6 {
+    .pt-#{$i * 5} {
+        padding-top: #{$i * 0.5}rem !important;
+    }
+    .pb-#{$i * 5} {
+        padding-bottom: #{$i * 0.5}rem !important;
+    }
+}
+
+.font-weight-normal {
+    font-weight: normal !important;
+}
+.font-weight-bold {
+    font-weight: bold !important;
+}
+
+@for $i from 10 through 20 {
+    .font-size-#{$i * 1} {
+        font-size: #{$i * 0.1}rem !important;
+    }
+}
+
+// @include mq(sm) {
+// 	.u-container {
+// 		max-width: 560px;
+// 		margin-right: auto;
+// 		margin-left: auto;
+// 	}
+// }
+
+// @include mq(md) {
+// 	.u-container {
+// 		max-width: 720px;
+// 	}
+// }
+
+// @include mq(lg) {
+// 	.u-container {
+// 		max-width: 960px;
+// 	}
+// }

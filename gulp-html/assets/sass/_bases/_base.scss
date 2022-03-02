@@ -1,0 +1,64 @@
+html {
+	font-family: $font-base;
+	font-size: 3.125vw;
+	color: $black;
+	word-break: break-all;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+@include mq(xs) {
+	html {
+		font-size: 2.666666666666667vw;
+	}
+}
+
+@include mq(sm) {
+	html {
+		font-size: 1.73611111111vw;
+	}
+}
+
+@include mq(md) {
+	html {
+		font-size: 1.302vw;
+	}
+}
+
+@include mq(xl) {
+	html {
+		font-size: 12px;
+	}
+}
+
+body {
+	position: relative;
+	background-color: $gray-100;
+}
+
+.l-mainContainer {
+	overflow-x: hidden;
+}
+
+img,
+svg {
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+	color: inherit;
+}
+
+em {
+	font-style: normal;
+}
+
+select {
+	appearance: none;
+	border-radius: 0;
+	box-shadow: none;
+}

@@ -1,0 +1,15 @@
+@import '../_global';
+
+header {
+	display: flex;
+	display: grid;
+	text-align: center;
+	color: #ff0;
+	font-size: 40px;
+}
+
+p {
+	font-weight: bold;
+	display: block;
+	font-size: 40px;
+}
