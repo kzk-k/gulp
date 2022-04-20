@@ -1,0 +1,12 @@
+{
+  "name": "minify_image",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^8.0.0",
+    "plumber": "^0.4.8",
+    "gulp-changed": "^4.0.3",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2"
+  },
+  "type": "module"
+}
